@@ -6,6 +6,14 @@ public class OperatorHeavy {
         if ((s1 == "123") && (i1 /i2 < 10 || i2 < 2)) {
             System.out.println("In loop");
         }
+        Integer i3 = i2 * 5 / 7 + i1;
+        Integer i4 = i3 * 5 / 7 + i1;
+        Integer i5 = i4 * 5 / 7 + i1;
+        Integer i6 = i5 * 5 / 7 + i1;
+        Integer i7 = i6 * 5 / 7 + i1;
+        Integer i8 = i7 * 5 / 7 + i1;
+        Integer i9 = i8 * 5 / 7 + i1;
+
     }
 
     private boolean f2(char ch) {
