@@ -93,4 +93,31 @@ public class OperatorHeavy {
         val++;
         return val;
     }
+    
+     private static int nextPowerOf2_refactored(int val) {
+        val--;
+        val = val_operation(val, 1);
+        val = val_operation(val, 2);
+        val = val_operation(val, 4);
+        val = val_operation(val, 8);
+        val = val_operation(val, 16);
+        val++;
+        return val;
+    }
+    
+    private static int nextPowerOf2_refactored2(int val) {
+        val--;
+        int shift = 1;
+        while (shift <= 16) {
+            val = val_operation(val, shift);
+            shift = shift * 2;
+        }
+        val++;
+        return val;
+    }
+    
+    
+    private static int val_operation(int val, int shift) {
+        return (val >> shift) | val;
+    }
 }
